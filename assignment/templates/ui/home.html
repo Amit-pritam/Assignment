@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Assignment</h2>
+
+<form action="result/">
+  {% csrf_token %}
+  <label for="country_name">Country:</label><br>
+  <input type="text" id="country_name" name="country_name" placeholder="Country" ><br>
+  <label for="state_name">State:</label><br>
+  <input type="text" id="State_name" name="state_name" placeholder="State"><br>
+  <label for="city_name">City:</label><br>
+  <input type="text" id="city_name" name="city_name" placeholder="City"><br>
+  <label for="location_name">Location:</label><br>
+  <input type="text" id="location_name" name="location_name" placeholder="location"><br><br>
+  <td><a href="result/" class="btn btn-warning">Submit</a></td>
+</form> 
+
+<p>If you click the "Submit" your data will be saved.</p>
+
+</body>
+{% endblock %}
